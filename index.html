@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>باب 2 — کثیر رکنیاں — جماعت دہم</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#eef3f7;
+    color:#222;
+    font-family:"Noto Nastaliq Urdu","Noto Nastaliq",serif;
+    line-height:2;
+}
+
+.container{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+    padding:10px;
+}
+
+.header{
+    background:#174a73;
+    color:white;
+    text-align:center;
+    padding:20px 10px;
+    border-radius:0 0 18px 18px;
+    margin-bottom:15px;
+}
+
+.header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.header h2{
+    margin:3px 0;
+    font-size:21px;
+}
+
+.header p{
+    margin:0;
+    font-size:17px;
+}
+
+/* INFORMATION */
+
+.info{
+    background:white;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.info h3{
+    color:#174a73;
+    margin:5px 0;
+}
+
+/* BUTTON AREA */
+
+.button-area{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#eef3f7;
+    padding:8px 0;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+button{
+    display:inline-block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    border:none;
+    border-radius:10px;
+    padding:10px 22px;
+    font-size:18px;
+    font-family:"Noto Nastaliq Urdu","Noto Nastaliq",serif;
+    cursor:pointer;
+    min-width:150px;
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+}
+
+.check{
+    background:#1769aa;
+    color:white;
+}
+
+.reset{
+    background:#6c757d;
+    color:white;
+}
+
+.print{
+    background:#198754;
+    color:white;
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+/* QUESTION */
+
+.question{
+    background:white;
+    padding:18px;
+    margin:17px 0;
+    border-radius:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.question-title{
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* OPTIONS */
+
+.option{
+    display:block;
+    width:100%;
+    padding:7px 12px;
+    margin:7px 0;
+    background:#f7f9fb;
+    border:1px solid #d8dee4;
+    border-radius:9px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#e9f2f8;
+}
+
+.option input{
+    margin-left:9px;
+    transform:scale(1.2);
+}
+
+.correct{
+    background:#d4edda !important;
+    border:2px solid #198754 !important;
+    color:#155724;
+}
+
+.wrong{
+    background:#f8d7da !important;
+    border:2px solid #dc3545 !important;
+    color:#721c24;
+}
+
+/* MATH */
+
+.math{
+    direction:ltr;
+    display:inline-block;
+    font-family:"Times New Roman",serif;
+    font-size:20px;
+}
+
+.frac{
+    display:inline-flex;
+    flex-direction:column;
+    vertical-align:middle;
+    text-align:center;
+    line-height:1.05;
+    margin:0 3px;
+}
+
+.frac .top{
+    border-bottom:1px solid #222;
+    padding:0 4px;
+}
+
+.frac .bottom{
+    padding:0 4px;
+}
+
+/* RESULT */
+
+#result{
+    display:none;
+    background:white;
+    margin:25px 0;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-size:21px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.good{
+    border:3px solid #198754;
+}
+
+.average{
+    border:3px solid #ffc107;
+}
+
+.low{
+    border:3px solid #dc3545;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    color:#666;
+    padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .header h2{
+        font-size:18px;
+    }
+
+    .question{
+        padding:14px;
+    }
+
+    .question-title{
+        font-size:18px;
+    }
+
+    .option{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    button{
+        width:90%;
+    }
+}
+
+/* PRINT */
+
+@media print{
+
+    body{
+        background:white;
+    }
+
+    .button-area,
+    #result{
+        display:none !important;
+    }
+
+    .question{
+        box-shadow:none;
+        border:1px solid #aaa;
+        page-break-inside:avoid;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>باب 2 — کثیر رکنیاں</h1>
+
+<h2>جماعت دہم — ریاضی</h2>
+
+<p>کثیر الانتخابی سوالات (MCQs)</p>
+
+</div>
+
+
+<!-- INFORMATION -->
+
+<div class="info">
+
+<h3>آموزشی مقاصد</h3>
+
+<p>
+الجبری اظہار کے درمیان کثیرالرکنیوں کی شناخت،
+درجہ بندی، صفر، مسئلہ باقی اور کثیرالرکنی کے
+اجزاءِ ضروری کو سمجھنا۔
+</p>
+
+<h3>تدریسی نکات</h3>
+
+<ul>
+<li>کثیرالرکنی کے معنی اور اقسام</li>
+<li>کثیرالرکنی کے صفر</li>
+<li>مسئلہ باقی</li>
+<li>کثیرالرکنی کے اجزاءِ ضروری</li>
+<li>کثیرالرکنیوں کی تمثیلات</li>
+</ul>
+
+<p>
+<strong>کل سوالات:</strong> 50
+&nbsp;&nbsp;&nbsp;
+<strong>کل نمبر:</strong> 50
+</p>
+
+<p>
+<strong>ہدایات:</strong>
+ہر سوال کے لیے دیے گئے چار اختیارات میں سے صحیح جواب منتخب کریں۔
+</p>
+
+</div>
+
+
+<!-- TOP BUTTONS -->
+
+<div class="button-area">
+
+<div class="buttons">
+
+<button type="button"
+class="check"
+onclick="checkAnswers()">
+✓ جوابات چیک کریں
+</button>
+
+<button type="button"
+class="reset"
+onclick="resetQuiz()">
+↻ دوبارہ شروع کریں
+</button>
+
+<button type="button"
+class="print"
+onclick="window.print()">
+🖨 پرنٹ کریں
+</button>
+
+</div>
+
+</div>
+
+
+<form id="quiz">
+
+
+<!-- 1 -->
+
+<div class="question">
+
+<div class="question-title">
+1۔ مندرجہ ذیل میں سے کون سا کثیرالرکنی ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+(A) <span class="math">4x<sup>2</sup> + 2x − 1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+(B) <span class="math">2/x + 3</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+(C) <span class="math">√x + 1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+(D) <span class="math">x + 1/x</span>
+</label>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="question">
+
+<div class="question-title">
+2۔ مندرجہ ذیل میں سے کون سا کثیرالرکنی نہیں ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+(A) <span class="math">3x<sup>2</sup> + 5x − 7</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+(B) <span class="math">x<sup>3</sup> − 2x + 1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+(C) <span class="math">3/x + 2</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+(D) <span class="math">7x − 4</span>
+</label>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="question">
+
+<div class="question-title">
+3۔ جس کثیرالرکنی کا درجہ 1 ہو، اسے کیا کہتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+(A) خطی کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+(B) مربع کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+(C) مکعب کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+(D) مستقل کثیرالرکنی
+</label>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="question">
+
+<div class="question-title">
+4۔ جس کثیرالرکنی کا درجہ 2 ہو، اسے کیا کہتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+(A) خطی کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+(B) مربع کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+(C) مکعب کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+(D) مستقل کثیرالرکنی
+</label>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="question">
+
+<div class="question-title">
+5۔ جس کثیرالرکنی کا درجہ 3 ہو، اسے کیا کہتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+(A) خطی کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+(B) مربع کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+(C) مکعب کثیرالرکنی
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+(D) مستقل کثیرالرکنی
+</label>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="question">
+
+<div class="question-title">
+6۔ <span class="math">7x<sup>3</sup> − 4x<sup>2</sup> + x − 9</span> کا درجہ کیا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q6" value="A">(A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">(B) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">(C) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">(D) 4
+</label>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="question">
+
+<div class="question-title">
+7۔ <span class="math">5x<sup>2</sup> − 3x + 8</span> کس قسم کا کثیرالرکنی ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q7" value="A">(A) خطی
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">(B) مربع
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">(C) مکعب
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">(D) مستقل
+</label>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="question">
+
+<div class="question-title">
+8۔ <span class="math">9x − 11</span> کا درجہ کیا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q8" value="A">(A) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">(B) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">(C) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">(D) 3
+</label>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="question">
+
+<div class="question-title">
+9۔ 7 ایک کس درجے کا کثیرالرکنی ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q9" value="A">(A) درجہ 0
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">(B) درجہ 1
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="C">(C) درجہ 2
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="D">(D) درجہ 3
+</label>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="question">
+
+<div class="question-title">
+10۔ <span class="math">3x<sup>2</sup> − 5x + 7</span> میں کتنے ارکان ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q10" value="A">(A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="B">(B) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">(C) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="D">(D) 4
+</label>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="question">
+
+<div class="question-title">
+11۔ اگر <span class="math">p(a) = 0</span> ہو تو <span class="math">a</span> کو کیا کہتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q11" value="A">(A) درجہ
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="B">(B) صفر
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">(C) جزوِ ضروری
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="D">(D) باقی
+</label>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="question">
+
+<div class="question-title">
+12۔ <span class="math">p(x) = x − 5</span> کا صفر کیا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q12" value="A">(A) −5
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="B">(B) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="C">(C) 5
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="D">(D) 1
+</label>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="question">
+
+<div class="question-title">
+13۔ <span class="math">p(x) = x + 7</span> کا صفر کیا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q13" value="A">(A) 7
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="B">(B) −7
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="C">(C) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">(D) 1
+</label>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="question">
+
+<div class="question-title">
+14۔ <span class="math">p(x) = 2x − 6</span> کا صفر کیا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q14" value="A">(A) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">(B) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="C">(C) 6
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="D">(D) −3
+</label>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="question">
+
+<div class="question-title">
+15۔ <span class="math">p(x) = x<sup>2</sup> − 9</span> کے صفر کیا ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q15" value="A">(A) 3 اور 9
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="B">(B) −3 اور 9
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="C">(C) 3 اور −3
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="D">(D) 0 اور 3
+</label>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="question">
+
+<div class="question-title">
+16۔ <span class="math">p(x)=x<sup>2</sup>−5x+6</span> کے صفر کون سے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q16" value="A">(A) 1 اور 6
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">(B) 2 اور 3
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="C">(C) −2 اور −3
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="D">(D) 0 اور 6
+</label>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="question">
+
+<div class="question-title">
+17۔ <span class="math">p(x)=x<sup>2</sup>−7x+12</span> کے صفر کیا ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q17" value="A">(A) 2 اور 6
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="B">(B) 3 اور 4
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="C">(C) −3 اور −4
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="D">(D) 1 اور 12
+</label>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="question">
+
+<div class="question-title">
+18۔ ایک خطی کثیرالرکنی کے زیادہ سے زیادہ کتنے صفر ہو سکتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q18" value="A">(A) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="B">(B) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">(C) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="D">(D) 3
+</label>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="question">
+
+<div class="question-title">
+19۔ ایک مربع کثیرالرکنی کے زیادہ سے زیادہ کتنے صفر ہو سکتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q19" value="A">(A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="B">(B) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="C">(C) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="D">(D) 4
+</label>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="question">
+
+<div class="question-title">
+20۔ ایک مکعب کثیرالرکنی کے زیادہ سے زیادہ کتنے صفر ہو سکتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q20" value="A">(A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">(B) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="C">(C) 3
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="D">(D) 4
+</label>
+
+</div>
+
+
+<!-- 21 -->
+
+<div class="question">
+
+<div class="question-title">
+21۔ کسی کثیرالرکنی کے صفر اس کے گراف میں کس کے برابر ہوتے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q21" value="A">(A) y-محور کے نقاط
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="B">(B) x-محور کو کاٹنے یا چھونے والے نقاط کے x-تکملی
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="C">(C) زیادہ سے زیادہ قیمت
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="D">(D) کم سے کم قیمت
+</label>
+
+</div>
+
+
+<!-- 22 -->
+
+<div class="question">
+
+<div class="question-title">
+22۔ اگر کسی کثیرالرکنی کا گراف x-محور کو دو مختلف نقاط پر کاٹے تو اس کے کتنے حقیقی صفر ہوں گے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q22" value="A">(A) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">(B) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="C">(C) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="D">(D) 3
+</label>
+
+</div>
+
+
+<!-- 23 -->
+
+<div class="question">
+
+<div class="question-title">
+23۔ اگر کسی مربع کثیرالرکنی کا گراف x-محور کو نہ کاٹے اور نہ چھوئے تو اس کے حقیقی صفر کتنے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q23" value="A">(A) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="B">(B) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="C">(C) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">(D) 3
+</label>
+
+</div>
+
+
+<!-- 24 -->
+
+<div class="question">
+
+<div class="question-title">
+24۔ <span class="math">ax<sup>2</sup>+bx+c</span> کے صفر α اور β ہوں تو α + β کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q24" value="A">
+(A) <span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+(B) −<span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="C">
+(C) <span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="D">
+(D) −<span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+</div>
+
+
+<!-- 25 -->
+
+<div class="question">
+
+<div class="question-title">
+25۔ <span class="math">ax<sup>2</sup>+bx+c</span> کے صفر α اور β ہوں تو αβ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q25" value="A">
+(A) <span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="B">
+(B) −<span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+(C) <span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="D">
+(D) −<span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+</div>
+
+
+<!-- 26 -->
+
+<div class="question">
+
+<div class="question-title">
+26۔ <span class="math">x<sup>2</sup>−5x+6</span> کے صفر α اور β ہوں تو α + β کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q26" value="A">(A) 6
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="B">(B) 5
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="C">(C) −5
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="D">(D) −6
+</label>
+
+</div>
+
+
+<!-- 27 -->
+
+<div class="question">
+
+<div class="question-title">
+27۔ <span class="math">x<sup>2</sup>−5x+6</span> کے صفر α اور β ہوں تو αβ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q27" value="A">(A) 5
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="B">(B) −5
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="C">(C) 6
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">(D) −6
+</label>
+
+</div>
+
+
+<!-- 28 -->
+
+<div class="question">
+
+<div class="question-title">
+28۔ <span class="math">2x<sup>2</sup>−7x+3</span> کے صفر α اور β ہوں تو α + β کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q28" value="A">
+(A) <span class="frac"><span class="top">7</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+(B) −<span class="frac"><span class="top">7</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="C">
+(C) <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="D">
+(D) −<span class="frac"><span class="top">3</span><span class="bottom">2</span></span>
+</label>
+
+</div>
+
+
+<!-- 29 -->
+
+<div class="question">
+
+<div class="question-title">
+29۔ <span class="math">2x<sup>2</sup>−7x+3</span> کے صفر α اور β ہوں تو αβ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q29" value="A">
+(A) <span class="frac"><span class="top">7</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="B">
+(B) −<span class="frac"><span class="top">7</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+(C) <span class="frac"><span class="top">3</span><span class="bottom">2</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="D">
+(D) −<span class="frac"><span class="top">3</span><span class="bottom">2</span></span>
+</label>
+
+</div>
+
+
+<!-- 30 -->
+
+<div class="question">
+
+<div class="question-title">
+30۔ <span class="math">ax<sup>3</sup>+bx<sup>2</sup>+cx+d</span> کے صفر α، β، γ ہوں تو α+β+γ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+(A) <span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="B">
+(B) −<span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="C">
+(C) <span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="D">
+(D) −<span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+</div>
+
+
+<!-- 31 -->
+
+<div class="question">
+
+<div class="question-title">
+31۔ <span class="math">ax<sup>3</sup>+bx<sup>2</sup>+cx+d</span> کے صفر α، β، γ ہوں تو αβ+βγ+γα کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q31" value="A">
+(A) <span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q31" value="B">
+(B) −<span class="frac"><span class="top">b</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q31" value="C">
+(C) <span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q31" value="D">
+(D) −<span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+</div>
+
+
+<!-- 32 -->
+
+<div class="question">
+
+<div class="question-title">
+32۔ <span class="math">ax<sup>3</sup>+bx<sup>2</sup>+cx+d</span> کے صفر α، β، γ ہوں تو αβγ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q32" value="A">
+(A) <span class="frac"><span class="top">d</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q32" value="B">
+(B) −<span class="frac"><span class="top">d</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q32" value="C">
+(C) <span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q32" value="D">
+(D) −<span class="frac"><span class="top">c</span><span class="bottom">a</span></span>
+</label>
+
+</div>
+
+
+<!-- 33 -->
+
+<div class="question">
+
+<div class="question-title">
+33۔ اگر <span class="math">p(x)</span> کو <span class="math">x−a</span> سے تقسیم کیا جائے تو باقی کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q33" value="A">(A) p(0)
+</label>
+
+<label class="option">
+<input type="radio" name="q33" value="B">(B) p(1)
+</label>
+
+<label class="option">
+<input type="radio" name="q33" value="C">(C) p(a)
+</label>
+
+<label class="option">
+<input type="radio" name="q33" value="D">(D) p(−a)
+</label>
+
+</div>
+
+
+<!-- 34 -->
+
+<div class="question">
+
+<div class="question-title">
+34۔ <span class="math">p(x)=x<sup>2</sup>+3x+2</span> کو <span class="math">x−1</span> سے تقسیم کرنے پر باقی کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q34" value="A">(A) 4
+</label>
+
+<label class="option">
+<input type="radio" name="q34" value="B">(B) 5
+</label>
+
+<label class="option">
+<input type="radio" name="q34" value="C">(C) 6
+</label>
+
+<label class="option">
+<input type="radio" name="q34" value="D">(D) 7
+</label>
+
+</div>
+
+
+<!-- 35 -->
+
+<div class="question">
+
+<div class="question-title">
+35۔ <span class="math">p(x)=x<sup>2</sup>−4x+3</span> کو <span class="math">x−2</span> سے تقسیم کرنے پر باقی کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q35" value="A">(A) −1
+</label>
+
+<label class="option">
+<input type="radio" name="q35" value="B">(B) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q35" value="C">(C) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q35" value="D">(D) 2
+</label>
+
+</div>
+
+
+<!-- 36 -->
+
+<div class="question">
+
+<div class="question-title">
+36۔ اگر <span class="math">p(3)=0</span> ہو تو <span class="math">p(x)</span> کا جزوِ ضروری کون سا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q36" value="A">(A) x+3
+</label>
+
+<label class="option">
+<input type="radio" name="q36" value="B">(B) x−3
+</label>
+
+<label class="option">
+<input type="radio" name="q36" value="C">(C) 3x−1
+</label>
+
+<label class="option">
+<input type="radio" name="q36" value="D">(D) x+1
+</label>
+
+</div>
+
+
+<!-- 37 -->
+
+<div class="question">
+
+<div class="question-title">
+37۔ اگر <span class="math">x+2</span>، <span class="math">p(x)</span> کا جزوِ ضروری ہے تو:
+</div>
+
+<label class="option">
+<input type="radio" name="q37" value="A">(A) p(2)=0
+</label>
+
+<label class="option">
+<input type="radio" name="q37" value="B">(B) p(−2)=0
+</label>
+
+<label class="option">
+<input type="radio" name="q37" value="C">(C) p(0)=2
+</label>
+
+<label class="option">
+<input type="radio" name="q37" value="D">(D) p(−2)=2
+</label>
+
+</div>
+
+
+<!-- 38 -->
+
+<div class="question">
+
+<div class="question-title">
+38۔ <span class="math">p(x)=x<sup>3</sup>−2x<sup>2</sup>+x−1</span> کو <span class="math">x−1</span> سے تقسیم کرنے پر باقی کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q38" value="A">(A) −1
+</label>
+
+<label class="option">
+<input type="radio" name="q38" value="B">(B) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q38" value="C">(C) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q38" value="D">(D) 2
+</label>
+
+</div>
+
+
+<!-- 39 -->
+
+<div class="question">
+
+<div class="question-title">
+39۔ اگر <span class="math">p(a)=0</span> ہو تو کون سا بیان درست ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q39" value="A">(A) x+a جزوِ ضروری ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q39" value="B">(B) x−a جزوِ ضروری ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q39" value="C">(C) x جزوِ ضروری ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q39" value="D">(D) x+a<sup>2</sup> جزوِ ضروری ہے
+</label>
+
+</div>
+
+
+<!-- 40 -->
+
+<div class="question">
+
+<div class="question-title">
+40۔ <span class="math">x−2</span>، <span class="math">x<sup>2</sup>−5x+6</span> کا جزوِ ضروری ہے کیونکہ:
+</div>
+
+<label class="option">
+<input type="radio" name="q40" value="A">(A) p(0)=0
+</label>
+
+<label class="option">
+<input type="radio" name="q40" value="B">(B) p(1)=0
+</label>
+
+<label class="option">
+<input type="radio" name="q40" value="C">(C) p(2)=0
+</label>
+
+<label class="option">
+<input type="radio" name="q40" value="D">(D) p(3)=0
+</label>
+
+</div>
+
+
+<!-- 41 -->
+
+<div class="question">
+
+<div class="question-title">
+41۔ x+1 کس کثیرالرکنی کا جزوِ ضروری ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q41" value="A">
+(A) <span class="math">x<sup>2</sup>−1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q41" value="B">
+(B) <span class="math">x<sup>2</sup>+x+1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q41" value="C">
+(C) <span class="math">x<sup>2</sup>+1</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q41" value="D">
+(D) <span class="math">x<sup>2</sup>−2x+1</span>
+</label>
+
+</div>
+
+
+<!-- 42 -->
+
+<div class="question">
+
+<div class="question-title">
+42۔ اگر x−3، p(x) کا جزوِ ضروری ہے تو p(3) کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q42" value="A">(A) −3
+</label>
+
+<label class="option">
+<input type="radio" name="q42" value="B">(B) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q42" value="C">(C) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q42" value="D">(D) 3
+</label>
+
+</div>
+
+
+<!-- 43 -->
+
+<div class="question">
+
+<div class="question-title">
+43۔ <span class="math">x<sup>2</sup>−9</span> کو عوامل میں کیسے لکھا جا سکتا ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q43" value="A">
+(A) <span class="math">(x−3)(x+3)</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q43" value="B">
+(B) <span class="math">(x−9)(x+1)</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q43" value="C">
+(C) <span class="math">(x−3)<sup>2</sup></span>
+</label>
+
+<label class="option">
+<input type="radio" name="q43" value="D">
+(D) <span class="math">(x+3)<sup>2</sup></span>
+</label>
+
+</div>
+
+
+<!-- 44 -->
+
+<div class="question">
+
+<div class="question-title">
+44۔ کثیرالرکنی کی تقسیم کا الگورتھم کون سا ہے؟
+</div>
+
+<div class="math">
+p(x) = g(x)q(x) + r(x)
+</div>
+
+<label class="option">
+<input type="radio" name="q44" value="A">(A) p(x)=g(x)+q(x)+r(x)
+</label>
+
+<label class="option">
+<input type="radio" name="q44" value="B">(B) p(x)=g(x)q(x)+r(x)
+</label>
+
+<label class="option">
+<input type="radio" name="q44" value="C">(C) p(x)=g(x)−q(x)−r(x)
+</label>
+
+<label class="option">
+<input type="radio" name="q44" value="D">(D) p(x)=g(x)q(x)−r(x)
+</label>
+
+</div>
+
+
+<!-- 45 -->
+
+<div class="question">
+
+<div class="question-title">
+45۔ کثیرالرکنی کی تقسیم میں باقی کی ڈگری ہمیشہ کس سے کم ہوتی ہے؟
+</div>
+
+<label class="option">
+<input type="radio" name="q45" value="A">(A) مقسوم کی ڈگری
+</label>
+
+<label class="option">
+<input type="radio" name="q45" value="B">(B) حاصلِ تقسیم کی ڈگری
+</label>
+
+<label class="option">
+<input type="radio" name="q45" value="C">(C) مقسوم علیہ کی ڈگری
+</label>
+
+<label class="option">
+<input type="radio" name="q45" value="D">(D) صفر کی ڈگری
+</label>
+
+</div>
+
+
+<!-- 46 -->
+
+<div class="question">
+
+<div class="question-title">
+46۔ اگر p(x) کو x−a سے تقسیم کرنے پر باقی صفر آئے تو:
+</div>
+
+<label class="option">
+<input type="radio" name="q46" value="A">(A) a، p(x) کا صفر ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q46" value="B">(B) −a، p(x) کا صفر ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q46" value="C">(C) a+1، p(x) کا صفر ہے
+</label>
+
+<label class="option">
+<input type="radio" name="q46" value="D">(D) a<sup>2</sup>، p(x) کا صفر ہے
+</label>
+
+</div>
+
+
+<!-- 47 -->
+
+<div class="question">
+
+<div class="question-title">
+47۔ اگر کسی مربع کثیرالرکنی کے صفر 2 اور 5 ہوں تو
+مستقل عددی عامل کو 1 فرض کرتے ہوئے کثیرالرکنی کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q47" value="A">
+(A) <span class="math">x<sup>2</sup>+7x+10</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q47" value="B">
+(B) <span class="math">x<sup>2</sup>−7x+10</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q47" value="C">
+(C) <span class="math">x<sup>2</sup>−3x+10</span>
+</label>
+
+<label class="option">
+<input type="radio" name="q47" value="D">
+(D) <span class="math">x<sup>2</sup>+3x−10</span>
+</label>
+
+</div>
+
+
+<!-- 48 -->
+
+<div class="question">
+
+<div class="question-title">
+48۔ اگر کسی مربع کثیرالرکنی کے صفر −2 اور 3 ہوں تو صفر کا مجموعہ کیا ہوگا؟
+</div>
+
+<label class="option">
+<input type="radio" name="q48" value="A">(A) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q48" value="B">(B) −1
+</label>
+
+<label class="option">
+<input type="radio" name="q48" value="C">(C) 5
+</label>
+
+<label class="option">
+<input type="radio" name="q48" value="D">(D) −5
+</label>
+
+</div>
+
+
+<!-- 49 -->
+
+<div class="question">
+
+<div class="question-title">
+49۔ اگر <span class="math">p(x)=x<sup>2</sup>−4x+4</span> ہو تو اس کے صفر کیا ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q49" value="A">(A) 2 اور 2
+</label>
+
+<label class="option">
+<input type="radio" name="q49" value="B">(B) −2 اور −2
+</label>
+
+<label class="option">
+<input type="radio" name="q49" value="C">(C) 2 اور −2
+</label>
+
+<label class="option">
+<input type="radio" name="q49" value="D">(D) 4 اور 4
+</label>
+
+</div>
+
+
+<!-- 50 -->
+
+<div class="question">
+
+<div class="question-title">
+50۔ اگر <span class="math">p(x)=x<sup>2</sup>+1</span> ہو تو اس کے حقیقی صفر کتنے ہیں؟
+</div>
+
+<label class="option">
+<input type="radio" name="q50" value="A">(A) 0
+</label>
+
+<label class="option">
+<input type="radio" name="q50" value="B">(B) 1
+</label>
+
+<label class="option">
+<input type="radio" name="q50" value="C">(C) 2
+</label>
+
+<label class="option">
+<input type="radio" name="q50" value="D">(D) 3
+</label>
+
+</div>
+
+
+</form>
+
+
+<!-- RESULT -->
+
+<div id="result"></div>
+
+
+<!-- BOTTOM BUTTONS -->
+
+<div class="button-area">
+
+<div class="buttons">
+
+<button type="button"
+class="check"
+onclick="checkAnswers()">
+✓ جوابات چیک کریں
+</button>
+
+<button type="button"
+class="reset"
+onclick="resetQuiz()">
+↻ دوبارہ شروع کریں
+</button>
+
+<button type="button"
+class="print"
+onclick="window.print()">
+🖨 پرنٹ کریں
+</button>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+باب 2 — کثیرالرکنیوں<br>
+جماعت دہم — ریاضی
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ==============================
+   ANSWER KEY
+   ============================== */
+
+var answers = {
+
+q1:"A",
+q2:"C",
+q3:"A",
+q4:"B",
+q5:"C",
+
+q6:"C",
+q7:"B",
+q8:"B",
+q9:"A",
+q10:"C",
+
+q11:"B",
+q12:"C",
+q13:"B",
+q14:"B",
+q15:"C",
+
+q16:"B",
+q17:"B",
+q18:"B",
+q19:"B",
+q20:"C",
+
+q21:"B",
+q22:"C",
+q23:"A",
+q24:"B",
+q25:"A",
+
+q26:"B",
+q27:"C",
+q28:"A",
+q29:"C",
+q30:"B",
+
+q31:"C",
+q32:"B",
+q33:"C",
+q34:"C",
+q35:"A",
+
+q36:"B",
+q37:"B",
+q38:"A",
+q39:"B",
+q40:"C",
+
+q41:"A",
+q42:"B",
+q43:"A",
+q44:"B",
+q45:"C",
+
+q46:"A",
+q47:"B",
+q48:"A",
+q49:"A",
+q50:"A"
+
+};
+
+
+/* ==============================
+   CHECK ANSWERS
+   ============================== */
+
+function checkAnswers(){
+
+var score = 0;
+var attempted = 0;
+
+var questions =
+document.querySelectorAll(".question");
+
+
+for(var i=1; i<=50; i++){
+
+var question = questions[i-1];
+
+if(!question){
+continue;
+}
+
+
+/* Remove previous colours */
+
+var options =
+question.querySelectorAll(".option");
+
+for(var j=0; j<options.length; j++){
+
+options[j].classList.remove(
+"correct",
+"wrong"
+);
+
+}
+
+
+/* Selected answer */
+
+var selected =
+document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+
+if(selected){
+
+attempted++;
+
+if(selected.value === answers["q"+i]){
+
+score++;
+
+selected.parentElement
+.classList.add("correct");
+
+}else{
+
+selected.parentElement
+.classList.add("wrong");
+
+
+var correct =
+question.querySelector(
+'input[value="'+answers["q"+i]+'"]'
+);
+
+
+if(correct){
+
+correct.parentElement
+.classList.add("correct");
+
+}
+
+}
+
+}
+
+}
+
+
+/* RESULT */
+
+var percentage =
+(score/50)*100;
+
+var result =
+document.getElementById("result");
+
+var message = "";
+var resultClass = "";
+
+
+if(percentage >= 80){
+
+message =
+"🌟 بہت عمدہ کارکردگی!";
+
+resultClass = "good";
+
+}
+else if(percentage >= 60){
+
+message =
+"👍 اچھی کارکردگی!";
+
+resultClass = "good";
+
+}
+else if(percentage >= 40){
+
+message =
+"📚 مزید مشق کی ضرورت ہے۔";
+
+resultClass = "average";
+
+}
+else{
+
+message =
+"💪 مزید محنت اور مشق کریں۔";
+
+resultClass = "low";
+
+}
+
+
+result.className = resultClass;
+
+result.innerHTML =
+
+"<strong>🎯 آپ کا نتیجہ</strong>" +
+
+"<br><br>" +
+
+"صحیح جوابات: " +
+"<strong>"+score+" / 50</strong>" +
+
+"<br>" +
+
+"حل کیے گئے سوالات: " +
+"<strong>"+attempted+" / 50</strong>" +
+
+"<br>" +
+
+"غیر حل شدہ سوالات: " +
+"<strong>"+(50-attempted)+"</strong>" +
+
+"<br>" +
+
+"فیصد: " +
+"<strong>"+percentage.toFixed(0)+"%</strong>" +
+
+"<br><br>" +
+
+message;
+
+
+result.style.display = "block";
+
+
+/* Scroll to result */
+
+result.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+
+/* ==============================
+   RESET
+   ============================== */
+
+function resetQuiz(){
+
+var radios =
+document.querySelectorAll(
+'input[type="radio"]'
+);
+
+
+for(var i=0; i<radios.length; i++){
+
+radios[i].checked = false;
+
+}
+
+
+var options =
+document.querySelectorAll(".option");
+
+
+for(var j=0; j<options.length; j++){
+
+options[j].classList.remove(
+"correct",
+"wrong"
+);
+
+}
+
+
+var result =
+document.getElementById("result");
+
+result.style.display = "none";
+
+result.innerHTML = "";
+
+result.className = "";
+
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+
+</body>
+</html>
