@@ -1,1 +1,1 @@
-# Class-10-Urdu-Maths-
+# Class-10-Urdu-Maths
